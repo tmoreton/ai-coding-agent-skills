@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Review"
+  short_description: "Find bugs and risks before merging"
+  default_prompt: "Review these changes for issues before merge."

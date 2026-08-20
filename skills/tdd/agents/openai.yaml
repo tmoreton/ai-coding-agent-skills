@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD"
+  short_description: "Use focused red-green-refactor tests"
+  default_prompt: "Use TDD for this change."

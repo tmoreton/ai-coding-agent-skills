@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ready for PR"
+  short_description: "Polish a branch for pull request review"
+  default_prompt: "Get this branch ready for PR review."

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-20T00:00:00.000Z",
+  "skills": [
+    {
+      "id": "cleanup-ai-generated-code",
+      "name": "Cleanup AI Code",
+      "description": "Remove generated cruft, tighten names, simplify logic, and keep behavior stable.",
+      "category": "Engineering",
+      "defaultPrompt": "Clean up this implementation without changing behavior.",
+      "sourcePath": "skills/cleanup-ai-generated-code/SKILL.md"
+    },
+    {
+      "id": "get-ready-for-pr",
+      "name": "Ready for PR",
+      "description": "Review the branch, run focused checks, polish the diff, and prepare a PR summary.",
+      "category": "Engineering",
+      "defaultPrompt": "Get this branch ready for PR review.",
+      "sourcePath": "skills/get-ready-for-pr/SKILL.md"
+    },
+    {
+      "id": "code-review",
+      "name": "Code Review",
+      "description": "Find bugs, regressions, missing tests, edge cases, and risky implementation choices.",
+      "category": "Engineering",
+      "defaultPrompt": "Review these changes for issues before merge.",
+      "sourcePath": "skills/code-review/SKILL.md"
+    },
+    {
+      "id": "tdd",
+      "name": "TDD",
+      "description": "Use a red-green-refactor loop with focused tests before implementation.",
+      "category": "Engineering",
+      "defaultPrompt": "Use TDD for this change.",
+      "sourcePath": "skills/tdd/SKILL.md"
+    },
+    {
+      "id": "resolving-merge-conflicts",
+      "name": "Merge Conflicts",
+      "description": "Resolve conflicts by preserving both branch intent and upstream fixes.",
+      "category": "Git",
+      "defaultPrompt": "Resolve the merge conflicts on this branch.",
+      "sourcePath": "skills/resolving-merge-conflicts/SKILL.md"
+    }
+  ]
+}

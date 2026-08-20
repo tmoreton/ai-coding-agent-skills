@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cleanup AI Code"
+  short_description: "Clean generated code without behavior changes"
+  default_prompt: "Clean up this implementation without changing behavior."

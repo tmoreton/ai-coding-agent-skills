@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merge Conflicts"
+  short_description: "Resolve merge conflicts without losing intent"
+  default_prompt: "Resolve the merge conflicts on this branch."
