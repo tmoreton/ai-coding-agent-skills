@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-08-20T00:00:00.000Z",
+  "version": 2,
+  "updatedAt": "2026-08-23T00:00:00.000Z",
   "skills": [
     {
       "id": "cleanup-ai-generated-code",
@@ -41,6 +41,44 @@
       "category": "Git",
       "defaultPrompt": "Resolve the merge conflicts on this branch.",
       "sourcePath": "skills/resolving-merge-conflicts/SKILL.md"
+    }
+  ],
+  "templates": [
+    {
+      "id": "astro-github-pages",
+      "name": "Astro Landing Page",
+      "description": "A polished Astro landing page with a GitHub Pages deployment workflow.",
+      "category": "Web",
+      "tags": ["astro", "landing-page", "github-pages"],
+      "defaultPrompt": "Start a new landing page from the Astro GitHub Pages template.",
+      "sourcePath": "templates/astro-github-pages/template.json"
+    },
+    {
+      "id": "expo-eas",
+      "name": "Expo EAS App",
+      "description": "An Expo app starter configured for development and EAS preview builds.",
+      "category": "Mobile",
+      "tags": ["expo", "react-native", "eas"],
+      "defaultPrompt": "Start a new mobile app from the Expo EAS template.",
+      "sourcePath": "templates/expo-eas/template.json"
+    },
+    {
+      "id": "python-starter",
+      "name": "Python Starter",
+      "description": "A dependency-free Python service starter with tests and structured logging.",
+      "category": "Backend",
+      "tags": ["python", "http", "api"],
+      "defaultPrompt": "Start a new Python project from the Python service template.",
+      "sourcePath": "templates/python-starter/template.json"
+    },
+    {
+      "id": "node-starter",
+      "name": "Node Starter",
+      "description": "A dependency-free Node.js service starter with a health endpoint and tests.",
+      "category": "Backend",
+      "tags": ["node", "javascript", "http", "api"],
+      "defaultPrompt": "Start a new Node.js project from the Node service template.",
+      "sourcePath": "templates/node-starter/template.json"
     }
   ]
 }

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "astro-github-pages",
+  "name": "Astro Landing Page",
+  "description": "A responsive Astro landing page with an automated GitHub Pages deployment.",
+  "category": "Web",
+  "variables": [
+    {
+      "name": "projectName",
+      "description": "The npm package name.",
+      "default": "northstar-site",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    {
+      "name": "githubOwner",
+      "description": "The GitHub user or organization that owns the repository.",
+      "default": "octocat",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$"
+    },
+    {
+      "name": "repositoryName",
+      "description": "The GitHub repository name used to calculate the Pages base path.",
+      "default": "northstar-site",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    }
+  ],
+  "files": [
+    { "source": "files/package.json", "destination": "package.json", "template": true },
+    { "source": "files/astro.config.mjs", "destination": "astro.config.mjs", "template": true },
+    { "source": "files/tsconfig.json", "destination": "tsconfig.json" },
+    { "source": "files/src/pages/index.astro", "destination": "src/pages/index.astro" },
+    { "source": "files/src/styles/global.css", "destination": "src/styles/global.css" },
+    { "source": "files/public/favicon.svg", "destination": "public/favicon.svg" },
+    { "source": "files/.github/workflows/deploy.yml", "destination": ".github/workflows/deploy.yml" },
+    { "source": "files/.gitignore", "destination": ".gitignore" },
+    { "source": "files/README.md", "destination": "README.md", "template": true }
+  ],
+  "commands": {
+    "setup": "npm install",
+    "dev": "npm run dev",
+    "verify": "npm run check && npm run build",
+    "deploy": "git push origin main"
+  },
+  "postCreatePrompt": "Replace the Northstar sample brand and content with the user's product, preserve the responsive and accessible layout, run npm run build, and confirm the GitHub Pages repository settings use GitHub Actions as the source."
+}

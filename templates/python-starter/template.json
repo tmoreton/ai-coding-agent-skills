@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "id": "python-starter",
+  "name": "Python Starter",
+  "description": "A dependency-free Python JSON service with tests and environment-based configuration.",
+  "category": "Backend",
+  "variables": [
+    {
+      "name": "projectName",
+      "description": "The project name used in documentation and service responses.",
+      "default": "python-service",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    }
+  ],
+  "files": [
+    { "source": "files/pyproject.toml", "destination": "pyproject.toml", "template": true },
+    { "source": "files/app/__init__.py", "destination": "app/__init__.py" },
+    { "source": "files/app/__main__.py", "destination": "app/__main__.py" },
+    { "source": "files/app/server.py", "destination": "app/server.py", "template": true },
+    { "source": "files/tests/test_server.py", "destination": "tests/test_server.py" },
+    { "source": "files/.gitignore", "destination": ".gitignore" },
+    { "source": "files/README.md", "destination": "README.md", "template": true }
+  ],
+  "commands": {
+    "setup": "python3 -m venv .venv",
+    "dev": ".venv/bin/python -m app",
+    "verify": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "postCreatePrompt": "Keep the standard-library starter unless the requested feature benefits from a framework, add behavior through tested request handlers, and run python3 -m unittest discover -s tests -v."
+}

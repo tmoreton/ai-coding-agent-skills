@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "id": "expo-eas",
+  "name": "Expo EAS App",
+  "description": "An Expo React Native starter with EAS development, preview, and production profiles.",
+  "category": "Mobile",
+  "variables": [
+    {
+      "name": "projectName",
+      "description": "The npm package and Expo slug.",
+      "default": "field-notes",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    {
+      "name": "displayName",
+      "description": "The app name shown to users.",
+      "default": "Field Notes",
+      "pattern": "^.{1,40}$"
+    },
+    {
+      "name": "bundleIdentifier",
+      "description": "The reverse-DNS iOS bundle identifier and Android package.",
+      "default": "com.example.fieldnotes",
+      "pattern": "^[A-Za-z][A-Za-z0-9]*(?:\\.[A-Za-z][A-Za-z0-9]*)+$"
+    }
+  ],
+  "files": [
+    { "source": "files/package.json", "destination": "package.json", "template": true },
+    { "source": "files/app.json", "destination": "app.json", "template": true },
+    { "source": "files/eas.json", "destination": "eas.json" },
+    { "source": "files/App.js", "destination": "App.js", "template": true },
+    { "source": "files/.gitignore", "destination": ".gitignore" },
+    { "source": "files/README.md", "destination": "README.md", "template": true }
+  ],
+  "commands": {
+    "setup": "npm install && npx eas-cli@latest init",
+    "dev": "npm start",
+    "verify": "npx expo-doctor",
+    "deploy": "npx eas-cli@latest build --platform all --profile preview"
+  },
+  "postCreatePrompt": "Run npm install, replace the sample Field Notes screen with the user's first workflow, run npx expo-doctor, then run npx eas-cli@latest init and keep the generated EAS project ID in app.json."
+}

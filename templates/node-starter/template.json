@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "id": "node-starter",
+  "name": "Node Starter",
+  "description": "A dependency-free Node.js JSON service with tests and graceful shutdown.",
+  "category": "Backend",
+  "variables": [
+    {
+      "name": "projectName",
+      "description": "The npm package and service name.",
+      "default": "node-service",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    }
+  ],
+  "files": [
+    { "source": "files/package.json", "destination": "package.json", "template": true },
+    { "source": "files/src/app.js", "destination": "src/app.js", "template": true },
+    { "source": "files/src/server.js", "destination": "src/server.js" },
+    { "source": "files/test/app.test.js", "destination": "test/app.test.js", "template": true },
+    { "source": "files/.gitignore", "destination": ".gitignore" },
+    { "source": "files/README.md", "destination": "README.md", "template": true }
+  ],
+  "commands": {
+    "setup": "npm install",
+    "dev": "npm run dev",
+    "verify": "npm test"
+  },
+  "postCreatePrompt": "Keep the zero-dependency HTTP core unless the requested feature needs a framework, add routes through the request handler, cover behavior with node:test, and run npm test."
+}
